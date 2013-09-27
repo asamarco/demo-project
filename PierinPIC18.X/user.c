@@ -48,12 +48,28 @@ void InitApp(void)
     //ANCON0 = 0b00000000; //channels AN7-AN0 (RE2-RE0 RA5-RA0)
     //ANCON1 = 0b00000000; //channels AN12-AN8 (RB4 RC2 RB3-RB0)
 
-
-
     /* Initialize peripherals */
+
+    /* timer2 */
+
+    T2CONbits.T2CKPS = 2; //2 interrupts per millisecond
+    T2CONbits.T2OUTPS = 4;
+    PR2 = 150;
+    IPR1bits.TMR2IP = 0;
+    PIE1bits.TMR2IE = 1;
 
     /* Configure the IPEN bit (1=on) in RCON to turn on/off int priorities */
 
+    RCONbits.IPEN = 1;
+
     /* Enable interrupts */
+
+    INTCONbits.GIEL = 1;
+    INTCONbits.GIEH = 1;
+
+    /* Start peripheals */
+
+    T2CONbits.TMR2ON = 1;
+
 }
 
