@@ -12733,9 +12733,12 @@ void ConfigureOscillator(void);
 # 13 "user.h"
 void InitApp(void);
 
-# 33 "main.c"
+# 38 "main.c"
 void main(void)
 {
+char c = 0;
+volatile unsigned short timer_delay = 0;
+
 
 ConfigureOscillator();
 
@@ -12746,8 +12749,33 @@ InitApp();
 
 while(1)
 {
-
+if (!timer_delay)
+{
+timer_delay=200;
+if (PORTDbits.RD4 && PORTDbits.RD5)
+{
+if (c & 0x02)
+{
+PORTDbits.RD6 = 1;
+PORTDbits.RD7 = 0;
 }
-
+else
+{
+PORTDbits.RD6 = 0;
+PORTDbits.RD7 = 1;
+}
+}
+else
+{
+PORTDbits.RD6 = 0;
+PORTDbits.RD7 = 0;
+if (!PORTDbits.RD4)
+{
+if (c & 0x01) PORTDbits.RD6 = 1;
+else PORTDbits.RD6 = 0;
+}
+}
+}
+}
 }
 

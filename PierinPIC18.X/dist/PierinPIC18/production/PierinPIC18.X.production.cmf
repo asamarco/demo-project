@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtF3ZGwF.obj
+$/tmp/cgtuYJLS2.obj
 end_init CODE 0 10A2 10A2 4 1
 reset_vec CODE 0 1000 1000 4 1
 config CONFIG 0 1FFF8 1FFF8 8 1
@@ -19,11 +19,11 @@ $dist/PierinPIC18/production/PierinPIC18.X.production.obj
 intcodelo CODE 0 1018 1018 8A 1
 intcode CODE 0 1008 1008 10 1
 intcode_body CODE 0 10A6 10A6 66 1
-text2 CODE 0 112E 112E 12 1
-text1 CODE 0 110C 110C 22 1
-text0 CODE 0 1140 1140 A 1
-cstackCOMRAM COMRAM 1 1 1 20 1
-cinit CODE 0 114A 114A 6 1
+text2 CODE 0 11A0 11A0 12 1
+text1 CODE 0 115E 115E 42 1
+text0 CODE 0 110C 110C 52 1
+cstackCOMRAM COMRAM 1 1 1 24 1
+cinit CODE 0 11B2 11B2 6 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -45,20 +45,20 @@ BANK6 00600-006FF 1
 BANK7 00700-007FF 1
 BANK8 00800-008FF 1
 BANK9 00900-009FF 1
-BIGRAM 00021-00EAF 1
+BIGRAM 00025-00EAF 1
 CODE 01004-01007 1
-CODE 01150-1FFF7 1
-COMRAM 00021-0005F 1
+CODE 011B8-1FFF7 1
+COMRAM 00025-0005F 1
 CONST 01004-01007 1
-CONST 01150-1FFF7 1
+CONST 011B8-1FFF7 1
 FARRAM 00000-00000 1
 MEDIUMCONST 01004-01007 1
-MEDIUMCONST 01150-0FFFF 1
+MEDIUMCONST 011B8-0FFFF 1
 MEDIUMCONST 10F00-1FFF7 1
 RAM 00060-00EAF 1
 SFR 00EB0-00FFF 1
 SMALLCONST 01004-01007 1
-SMALLCONST 01150-1FFF7 1
+SMALLCONST 011B8-1FFF7 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -73,28 +73,52 @@ SMALLCONST 01150-1FFF7 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/PierinPIC18/production/PierinPIC18.X.production.obj
-"/home/marco/github/PierinPIC18/PierinPIC18.X/interrupts.c":102 105C intcodelo CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/interrupts.c":36 10A6 intcode_body CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/interrupts.c":63 10D2 intcode_body CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":33 110C text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":34 1110 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":36 1112 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":37 1116 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":39 1118 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":40 111C text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":42 111E text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":43 1122 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":45 1126 text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":46 112A text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/user.c":58 112C text1 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/system.c":33 112E text2 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/system.c":34 1130 text2 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/system.c":36 113E text2 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/main.c":36 1140 text0 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/main.c":39 1144 text0 CODE
-"/home/marco/github/PierinPIC18/PierinPIC18.X/main.c":43 1148 text0 CODE
-"/tmp/cgtEzIUnf":3667 114A cinit CODE
-"/tmp/cgtEzIUnf":3668 114C cinit CODE
+"/home/marco/github/demo-project/PierinPIC18.X/interrupts.c":102 105C intcodelo CODE
+"/home/marco/github/demo-project/PierinPIC18.X/interrupts.c":36 10A6 intcode_body CODE
+"/home/marco/github/demo-project/PierinPIC18.X/interrupts.c":63 10D2 intcode_body CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":40 110C text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":41 1114 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":44 111C text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":47 1120 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":53 1124 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":55 112C text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":56 1134 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":58 113A text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":60 113E text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":61 1140 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":62 1142 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":65 1144 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":66 1146 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":71 114A text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":72 114C text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":73 114E text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":75 1152 text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/main.c":76 115A text0 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":33 115E text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":34 1162 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":36 1164 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":37 1168 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":39 116A text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":40 116E text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":42 1170 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":43 1174 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":45 1178 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":46 117C text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":55 117E text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":56 1186 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":57 118E text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":58 1192 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":59 1194 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":63 1196 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":67 1198 text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":68 119A text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":72 119C text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/user.c":74 119E text1 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/system.c":33 11A0 text2 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/system.c":34 11A2 text2 CODE
+"/home/marco/github/demo-project/PierinPIC18.X/system.c":36 11B0 text2 CODE
+"/tmp/cgtEb2ZEP":3681 11B2 cinit CODE
+"/tmp/cgtEb2ZEP":3682 11B4 cinit CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -108,8 +132,9 @@ $dist/PierinPIC18/production/PierinPIC18.X.production.obj
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __CFG_XINST$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_PR2 FCB 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __S0 20000 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__S1 21 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__S1 25 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __size_of_low_isr 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -118,8 +143,8 @@ _LATB F8A 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _LATC F8B 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _LATD F8C 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _LATE F8D 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-_main 1140 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
-start 10A2 0 CODE 0 init /tmp/cgtF3ZGwF.obj
+_main 110C 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+start 10A2 0 CODE 0 init /tmp/cgtuYJLS2.obj
 __CFG_SOSCSEL$HIGH 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _TRISA F92 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _TRISC F94 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -133,6 +158,7 @@ __CFG_WDTPS$32768 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.producti
 __Hconfig 20000 0 CONFIG 0 config dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lconfig 1FFF8 0 CONFIG 0 config dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_RTCOSC$T1OSCREF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+main@c 22 0 COMRAM 1 cstackCOMRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lbigram 0 0 ABS 0 bigram dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hrparam 0 0 ABS 0 rparam dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -148,9 +174,12 @@ __CFG_STVREN$ON 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production
 __Lbss 0 0 RAM 1 bss dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_PIE1bits F9D 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_DSWDTPS$8192 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_IPR1bits F9F 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_RCONbits FD0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -179,7 +208,7 @@ __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PierinPIC18/production/PierinPIC18.X.prod
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hdata 0 0 ABS 0 data dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ldata 0 0 ABS 0 data dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__end_of_ConfigureOscillator 1140 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__end_of_ConfigureOscillator 11B2 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Htemp 0 0 COMRAM 1 temp dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ltemp 0 0 COMRAM 1 temp dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -189,12 +218,14 @@ __Linit 10A2 0 CODE 0 init dist/PierinPIC18/production/PierinPIC18.X.production.
 __Hintcodelo 10A2 0 CODE 0 intcodelo dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lintcodelo 1018 0 CODE 0 intcodelo dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__end_of_main 114A 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__end_of_main 115E 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __pintcodelo 1018 0 CODE 0 intcodelo dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Htext 0 0 ABS 0 text dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ltext 0 0 ABS 0 text dist/PierinPIC18/production/PierinPIC18.X.production.obj
-end_of_initialization 114A 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+end_of_initialization 11B2 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_PORTDbits F83 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_T2CONbits FCA 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __end_of_high_isr 110C 0 CODE 0 intcode_body dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -228,17 +259,17 @@ __Hbank9 0 0 ABS 0 bank9 dist/PierinPIC18/production/PierinPIC18.X.production.ob
 __Lbank9 0 0 ABS 0 bank9 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Htext1 0 0 ABS 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ltext1 0 0 ABS 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__ptext0 1140 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__ptext0 110C 0 CODE 0 text0 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Htext2 0 0 ABS 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ltext2 0 0 ABS 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__ptext1 110C 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__ptext2 112E 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__ptext1 115E 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__ptext2 11A0 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__end_of_InitApp 112E 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__end_of_InitApp 11A0 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_DSWDTOSC$INTOSCREF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 _OSCTUNEbits F9B 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__end_of__initialization 114A 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__end_of__initialization 11B2 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_CLKOEC$ON 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_WPCFG$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hidata 0 0 CODE 0 idata dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -247,13 +278,14 @@ __Hrdata 0 0 COMRAM 1 rdata dist/PierinPIC18/production/PierinPIC18.X.production
 __Lrdata 0 0 COMRAM 1 rdata dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hidloc 0 0 IDLOC 0 idloc dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lidloc 0 0 IDLOC 0 idloc dist/PierinPIC18/production/PierinPIC18.X.production.obj
+main@timer_delay 23 0 COMRAM 1 cstackCOMRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __size_of_high_isr 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 int_func 10A6 0 CODE 0 intcode_body dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hparam 0 0 ABS 0 rparam dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lparam 0 0 ABS 0 rparam dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
-_InitApp 110C 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_InitApp 115E 0 CODE 0 text1 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -261,11 +293,11 @@ __Hnvbit 0 0 COMRAM 1 nvbit dist/PierinPIC18/production/PierinPIC18.X.production
 __Lnvbit 0 0 COMRAM 1 nvbit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hcinit 0 0 ABS 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__pcinit 114A 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__pcinit 11B2 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_DSBOREN$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __size_of_ConfigureOscillator 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__ramtop F00 0 RAM 0 ramtop /tmp/cgtF3ZGwF.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtF3ZGwF.obj
+__ramtop F00 0 RAM 0 ramtop /tmp/cgtuYJLS2.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtuYJLS2.obj
 _low_isr 1018 0 CODE 0 intcodelo dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hconst 0 0 CODE 0 const dist/PierinPIC18/production/PierinPIC18.X.production.obj
@@ -287,32 +319,33 @@ __Lbank14 0 0 ABS 0 bank14 dist/PierinPIC18/production/PierinPIC18.X.production.
 __CFG_PLLDIV$3 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_ADCSEL$BIT10 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_WDTEN$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_INTCONbits FF2 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hend_init 10A6 0 CODE 0 end_init dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lend_init 10A2 0 CODE 0 end_init dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Hjflash_buffer 1F800 0 CODE 0 jflash_buffer dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Ljflash_buffer 1F800 0 CODE 0 jflash_buffer dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_CP0$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_WPFP$PAGE_1 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgtF3ZGwF.obj
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgtuYJLS2.obj
 __Hreset_vec 1004 0 CODE 0 reset_vec dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lreset_vec 1000 0 CODE 0 reset_vec dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/cgtF3ZGwF.obj
+__accesstop 60 0 ABS 0 - /tmp/cgtuYJLS2.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_LS48MHZ$SYS48X8 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __pintcode_body 10A6 0 CODE 0 intcode_body dist/PierinPIC18/production/PierinPIC18.X.production.obj
-intlevel0 0 0 CODE 0 text /tmp/cgtF3ZGwF.obj
+intlevel0 0 0 CODE 0 text /tmp/cgtuYJLS2.obj
 __size_of_InitApp 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-intlevel1 0 0 CODE 0 text /tmp/cgtF3ZGwF.obj
+intlevel1 0 0 CODE 0 text /tmp/cgtuYJLS2.obj
 __CFG_WPDIS$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-intlevel2 0 0 CODE 0 text /tmp/cgtF3ZGwF.obj
-intlevel3 0 0 CODE 0 text /tmp/cgtF3ZGwF.obj
-start_initialization 114A 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+intlevel2 0 0 CODE 0 text /tmp/cgtuYJLS2.obj
+intlevel3 0 0 CODE 0 text /tmp/cgtuYJLS2.obj
+start_initialization 11B2 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __end_of_low_isr 10A2 0 CODE 0 intcodelo dist/PierinPIC18/production/PierinPIC18.X.production.obj
-__initialization 114A 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
+__initialization 11B2 0 CODE 0 cinit dist/PierinPIC18/production/PierinPIC18.X.production.obj
 __activetblptr 0 0 ABS 0 - dist/PierinPIC18/production/PierinPIC18.X.production.obj
-_ConfigureOscillator 112E 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
+_ConfigureOscillator 11A0 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18.X.production.obj
 # %DABS Section
 # This section contains a table of all usuage of the assember
 # directive DABS in the program. Each line has the following format:
@@ -331,6 +364,6 @@ _ConfigureOscillator 112E 0 CODE 0 text2 dist/PierinPIC18/production/PierinPIC18
 %SEGMENTS
 reset_vec 0 1000 1000 4 1 CODE
 intcode 0 1008 1008 10 1 CODE
-intcodelo 0 1018 1018 138 1 CODE
+intcodelo 0 1018 1018 1A0 1 CODE
 config 0 1FFF8 1FFF8 8 1 CONFIG
-cstackCOMRAM 1 1 1 20 1 COMRAM
+cstackCOMRAM 1 1 1 24 1 COMRAM

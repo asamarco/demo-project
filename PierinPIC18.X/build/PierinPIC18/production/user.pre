@@ -12751,6 +12751,25 @@ TRISD = 0b00111111;
 LATE = 0;
 TRISE = 0b11111111;
 
-# 58
+# 55
+T2CONbits.T2CKPS = 2;
+T2CONbits.T2OUTPS = 4;
+PR2 = 150;
+IPR1bits.TMR2IP = 0;
+PIE1bits.TMR2IE = 1;
+
+
+
+RCONbits.IPEN = 1;
+
+
+
+INTCONbits.GIEL = 1;
+INTCONbits.GIEH = 1;
+
+
+
+T2CONbits.TMR2ON = 1;
+
 }
 

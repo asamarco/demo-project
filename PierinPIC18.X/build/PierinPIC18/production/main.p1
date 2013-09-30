@@ -4,6 +4,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
 "13 user.h
 [v _InitApp `(v ~T0 @X0 0 ef ]
+"10238 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
+[s S660 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S660 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"10248
+[s S661 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S661 . PMD0 PMD1 PMD2 PMD3 PMD4 PMD5 PMD6 PMD7 ]
+"10258
+[s S662 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S662 . SCL2 SDA2 RP19 RP20 RP21 RP22 RP23 RP24 ]
+"10268
+[s S663 :7 `uc 1 :1 `uc 1 ]
+[n S663 . . SS2 ]
+"10237
+[u S659 `S660 1 `S661 1 `S662 1 `S663 1 ]
+[n S659 . . . . . ]
+"10273
+[v _PORTDbits `VS659 ~T0 @X0 0 e@3971 ]
 [; ;pic18f47j53.h: 44: extern volatile unsigned char ADCTRIG @ 0xEB8;
 "46 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
 [; ;pic18f47j53.h: 46: asm("ADCTRIG equ 0EB8h");
@@ -9782,33 +9799,132 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;system.h: 21: void ConfigureOscillator(void);
 [; ;user.h: 13: void InitApp(void);
-"34 main.c
+"39 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 33: void main(void)
-[; ;main.c: 34: {
+[; ;main.c: 38: void main(void)
+[; ;main.c: 39: {
 [e :U _main ]
 [f ]
-[; ;main.c: 36: ConfigureOscillator();
-"36
-[e ( _ConfigureOscillator ..  ]
-[; ;main.c: 39: InitApp();
-"39
-[e ( _InitApp ..  ]
-[; ;main.c: 43: while(1)
-"43
-[e :U 1358 ]
-[; ;main.c: 44: {
+"40
+[v _c `uc ~T0 @X0 1 a ]
+[; ;main.c: 40: char c = 0;
+[e = _c -> -> 0 `i `uc ]
+"41
+[v _timer_delay `Vus ~T0 @X0 1 a ]
+[; ;main.c: 41: volatile unsigned short timer_delay = 0;
+[e = _timer_delay -> -> 0 `i `us ]
+[; ;main.c: 44: ConfigureOscillator();
 "44
+[e ( _ConfigureOscillator ..  ]
+[; ;main.c: 47: InitApp();
+"47
+[e ( _InitApp ..  ]
+[; ;main.c: 51: while(1)
+"51
+[e :U 1358 ]
+[; ;main.c: 52: {
+"52
 {
-"46
+[; ;main.c: 53: if (!timer_delay)
+"53
+[e $ ! ! != -> _timer_delay `ui -> -> -> 0 `i `Vus `ui 1360  ]
+[; ;main.c: 54: {
+"54
+{
+[; ;main.c: 55: timer_delay=200;
+"55
+[e = _timer_delay -> -> 200 `i `us ]
+[; ;main.c: 56: if (PORTDbits.RD4 && PORTDbits.RD5)
+"56
+[e $ ! && != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i 1361  ]
+[; ;main.c: 57: {
+"57
+{
+[; ;main.c: 58: if (c & 0x02)
+"58
+[e $ ! != & -> _c `i -> 2 `i -> 0 `i 1362  ]
+[; ;main.c: 59: {
+"59
+{
+[; ;main.c: 60: PORTDbits.RD6 = 1;
+"60
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 61: PORTDbits.RD7 = 0;
+"61
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+"62
+}
+[; ;main.c: 62: }
+[e $U 1363  ]
+"63
+[e :U 1362 ]
+[; ;main.c: 63: else
+[; ;main.c: 64: {
+"64
+{
+[; ;main.c: 65: PORTDbits.RD6 = 0;
+"65
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 66: PORTDbits.RD7 = 1;
+"66
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
+"67
+}
+[e :U 1363 ]
+"68
+}
+[; ;main.c: 67: }
+[; ;main.c: 68: }
+[e $U 1364  ]
+"69
+[e :U 1361 ]
+[; ;main.c: 69: else
+[; ;main.c: 70: {
+"70
+{
+[; ;main.c: 71: PORTDbits.RD6 = 0;
+"71
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 72: PORTDbits.RD7 = 0;
+"72
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[; ;main.c: 73: if (!PORTDbits.RD4)
+"73
+[e $ ! ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i 1365  ]
+[; ;main.c: 74: {
+"74
+{
+[; ;main.c: 75: if (c & 0x01) PORTDbits.RD6 = 1;
+"75
+[e $ ! != & -> _c `i -> 1 `i -> 0 `i 1366  ]
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+[e $U 1367  ]
+"76
+[e :U 1366 ]
+[; ;main.c: 76: else PORTDbits.RD6 = 0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e :U 1367 ]
+"77
+}
+[e :U 1365 ]
+"78
+}
+[e :U 1364 ]
+"79
+}
+[e :U 1360 ]
+"80
 }
 [e :U 1357 ]
-"43
+"51
 [e $U 1358  ]
 [e :U 1359 ]
-[; ;main.c: 46: }
-[; ;main.c: 48: }
-"48
+[; ;main.c: 77: }
+[; ;main.c: 78: }
+[; ;main.c: 79: }
+[; ;main.c: 80: }
+[; ;main.c: 81: }
+"81
 [e :UE 1356 ]
 }

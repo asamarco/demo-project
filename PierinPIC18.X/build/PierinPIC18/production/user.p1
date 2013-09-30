@@ -17,6 +17,96 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
 "12012
 [v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"17961
+[s S1143 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S1143 . T2CKPS TMR2ON T2OUTPS ]
+"17966
+[s S1144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1144 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"17960
+[u S1142 `S1143 1 `S1144 1 ]
+[n S1142 . . . ]
+"17976
+[v _T2CONbits `VS1142 ~T0 @X0 0 e@4042 ]
+"18025
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"12777
+[s S809 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S809 . TMR1IP TMR2IP CCP1IP SSP1IP TX1IP RC1IP ADIP PMPIP ]
+"12787
+[s S810 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S810 . . SSPIP TXIP RCIP ]
+"12793
+[s S811 :7 `uc 1 :1 `uc 1 ]
+[n S811 . . PSPIP ]
+"12776
+[u S808 `S809 1 `S810 1 `S811 1 ]
+[n S808 . . . . ]
+"12798
+[v _IPR1bits `VS808 ~T0 @X0 0 e@3999 ]
+"12595
+[s S801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S801 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE PMPIE ]
+"12605
+[s S802 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S802 . . SSPIE TXIE RCIE ]
+"12611
+[s S803 :7 `uc 1 :1 `uc 1 ]
+[n S803 . . PSPIE ]
+"12594
+[u S800 `S801 1 `S802 1 `S803 1 ]
+[n S800 . . . . ]
+"12616
+[v _PIE1bits `VS800 ~T0 @X0 0 e@3997 ]
+"18234
+[s S1162 :1 `uc 1 ]
+[n S1162 . NOT_BOR ]
+"18237
+[s S1163 :1 `uc 1 :1 `uc 1 ]
+[n S1163 . . NOT_POR ]
+"18241
+[s S1164 :2 `uc 1 :1 `uc 1 ]
+[n S1164 . . NOT_PD ]
+"18245
+[s S1165 :3 `uc 1 :1 `uc 1 ]
+[n S1165 . . NOT_TO ]
+"18249
+[s S1166 :4 `uc 1 :1 `uc 1 ]
+[n S1166 . . NOT_RI ]
+"18253
+[s S1167 :5 `uc 1 :1 `uc 1 ]
+[n S1167 . . NOT_CM ]
+"18257
+[s S1168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1168 . nBOR nPOR nPD nTO nRI nCM . IPEN ]
+"18267
+[s S1169 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1169 . BOR POR PD TO RI CM ]
+"18233
+[u S1161 `S1162 1 `S1163 1 `S1164 1 `S1165 1 `S1166 1 `S1167 1 `S1168 1 `S1169 1 ]
+[n S1161 . . . . . . . . . ]
+"18276
+[v _RCONbits `VS1161 ~T0 @X0 0 e@4048 ]
+"19874
+[s S1280 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1280 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"19884
+[s S1281 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1281 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"19894
+[s S1282 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1282 . . GIEL GIEH ]
+"19899
+[s S1283 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1283 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"19909
+[s S1284 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1284 . . GIEL GIEH ]
+"19873
+[u S1279 `S1280 1 `S1281 1 `S1282 1 `S1283 1 `S1284 1 ]
+[n S1279 . . . . . . ]
+"19915
+[v _INTCONbits `VS1279 ~T0 @X0 0 e@4082 ]
 [; ;pic18f47j53.h: 44: extern volatile unsigned char ADCTRIG @ 0xEB8;
 "46 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
 [; ;pic18f47j53.h: 46: asm("ADCTRIG equ 0EB8h");
@@ -9831,7 +9921,34 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;user.c: 46: TRISE = 0b11111111;
 "46
 [e = _TRISE -> -> 255 `i `uc ]
-[; ;user.c: 58: }
+[; ;user.c: 55: T2CONbits.T2CKPS = 2;
+"55
+[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
+[; ;user.c: 56: T2CONbits.T2OUTPS = 4;
+"56
+[e = . . _T2CONbits 0 2 -> -> 4 `i `uc ]
+[; ;user.c: 57: PR2 = 150;
+"57
+[e = _PR2 -> -> 150 `i `uc ]
+[; ;user.c: 58: IPR1bits.TMR2IP = 0;
 "58
+[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 59: PIE1bits.TMR2IE = 1;
+"59
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 63: RCONbits.IPEN = 1;
+"63
+[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
+[; ;user.c: 67: INTCONbits.GIEL = 1;
+"67
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;user.c: 68: INTCONbits.GIEH = 1;
+"68
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;user.c: 72: T2CONbits.TMR2ON = 1;
+"72
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 74: }
+"74
 [e :UE 1356 ]
 }

@@ -1,4 +1,4 @@
-<Base project for PierinPIC18>
+<Demo project for PierinPIC18>
 
 Project Owner(s): Asa Marco
 Author(s): Asa Marco
