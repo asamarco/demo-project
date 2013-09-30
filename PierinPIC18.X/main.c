@@ -17,21 +17,16 @@
 
 #endif
 
+#include "main.h"
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
 
-
-#define PL1 PORTDbits.RD4
-#define PL2 PORTDbits.RD5
-#define LD1 PORTDbits.RD6
-#define LD2 PORTDbits.RD7
 #define PERIOD 200 //ms
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
 /******************************************************************************/
-
-
+volatile unsigned short timer_delay = 0;    // Timer software
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
@@ -39,7 +34,6 @@
 void main(void)
 {
     char c = 0; //flash duration
-    volatile unsigned short timer_delay = 0;    // Timer software
 
     /* Configure the oscillator for the device */
     ConfigureOscillator();

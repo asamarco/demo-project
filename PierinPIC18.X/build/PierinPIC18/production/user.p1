@@ -9902,6 +9902,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 13: void InitApp(void);
+[; ;user.h: 14: void timer2_deInit(void);
 "28 user.c
 [v _timer2_deInit `(v ~T0 @X0 1 ef ]
 {

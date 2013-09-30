@@ -12727,21 +12727,26 @@ typedef uint16_t uintptr_t;
 # 12 "/opt/microchip/xc8/v1.20/include/stdbool.h"
 typedef unsigned char bool;
 
-# 27 "interrupts.c"
+# 29 "interrupts.c"
 void interrupt high_isr(void)
 
-# 36
+# 38
 {
 
-# 63
+# 65
 }
 
 
 
 void low_priority interrupt low_isr(void)
 
-# 75
-{
+# 78
+extern volatile unsigned short timer_delay = 0;
 
-# 102
+{
+if(PIR1bits.TMR2IF)
+{
+if (timer_delay) timer_delay--;
+PIR1bits.TMR2IF = 0;
+}
 }

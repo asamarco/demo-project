@@ -1,8 +1,8 @@
-_timer2_deInit: CODE, 4544 0 20
-_ConfigureOscillator: CODE, 4564 0 18
-_main: CODE, 4262 0 110
-_high_isr: CODE, 4104 0 370
-_InitApp: CODE, 4474 0 70
-__initialization: CODE, 4582 0 0
-_low_isr: CODE, 4120 0 138
-Total: 726
+_timer2_deInit: CODE, 4568 0 20
+_ConfigureOscillator: CODE, 4588 0 18
+_main: CODE, 4294 0 102
+_high_isr: CODE, 4104 0 394
+_InitApp: CODE, 4498 0 70
+__initialization: CODE, 4606 0 4
+_low_isr: CODE, 4120 0 170
+Total: 778

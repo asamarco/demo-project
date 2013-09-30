@@ -12729,6 +12729,7 @@ typedef unsigned char bool;
 
 # 13 "user.h"
 void InitApp(void);
+void timer2_deInit(void);
 
 # 27 "user.c"
 void timer2_deInit(void)

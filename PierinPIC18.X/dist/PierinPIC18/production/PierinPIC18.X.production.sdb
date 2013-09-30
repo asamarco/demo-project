@@ -124,11 +124,11 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "5 /opt/microchip/xc8/v1.20/sources/pic18/aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"36 /home/marco/github/demo-project/PierinPIC18.X/interrupts.c
+"38 /home/marco/github/demo-project/PierinPIC18.X/interrupts.c
 [v _high_isr high_isr `II(v  1 e 0 0 ]
-"75
+"77
 [v _low_isr low_isr `IIL(v  1 e 0 0 ]
-"40 /home/marco/github/demo-project/PierinPIC18.X/main.c
+"35 /home/marco/github/demo-project/PierinPIC18.X/main.c
 [v _main main `(v  1 e 0 0 ]
 "25 /home/marco/github/demo-project/PierinPIC18.X/system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
@@ -136,7 +136,7 @@
 [v _timer2_deInit timer2_deInit `(v  1 e 0 0 ]
 "38
 [v _InitApp InitApp `(v  1 e 0 0 ]
-[s S33 . 1 `uc 1 RD0 1 0 :1:0 
+[s S81 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -146,7 +146,7 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "10273 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
-[s S42 . 1 `uc 1 PMD0 1 0 :1:0 
+[s S90 . 1 `uc 1 PMD0 1 0 :1:0 
 `uc 1 PMD1 1 0 :1:1 
 `uc 1 PMD2 1 0 :1:2 
 `uc 1 PMD3 1 0 :1:3 
@@ -155,7 +155,7 @@
 `uc 1 PMD6 1 0 :1:6 
 `uc 1 PMD7 1 0 :1:7 
 ]
-[s S51 . 1 `uc 1 SCL2 1 0 :1:0 
+[s S99 . 1 `uc 1 SCL2 1 0 :1:0 
 `uc 1 SDA2 1 0 :1:1 
 `uc 1 RP19 1 0 :1:2 
 `uc 1 RP20 1 0 :1:3 
@@ -164,11 +164,11 @@
 `uc 1 RP23 1 0 :1:6 
 `uc 1 RP24 1 0 :1:7 
 ]
-[s S60 . 1 `uc 1 . 1 0 :7:0 
+[s S108 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
-[u S63 . 1 `S33 1 . 1 0 `S42 1 . 1 0 `S51 1 . 1 0 `S60 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES63  1 e 1 @3971 ]
+[u S111 . 1 `S81 1 . 1 0 `S90 1 . 1 0 `S99 1 . 1 0 `S108 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES111  1 e 1 @3971 ]
 "10933
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "11060
@@ -187,52 +187,52 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "12012
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S110 . 1 `uc 1 TUN 1 0 :6:0 
+[s S158 . 1 `uc 1 TUN 1 0 :6:0 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
 ]
 "12403
-[s S114 . 1 `uc 1 TUN0 1 0 :1:0 
+[s S162 . 1 `uc 1 TUN0 1 0 :1:0 
 `uc 1 TUN1 1 0 :1:1 
 `uc 1 TUN2 1 0 :1:2 
 `uc 1 TUN3 1 0 :1:3 
 `uc 1 TUN4 1 0 :1:4 
 `uc 1 TUN5 1 0 :1:5 
 ]
-[u S121 . 1 `S110 1 . 1 0 `S114 1 . 1 0 ]
-[v _OSCTUNEbits OSCTUNEbits `VES121  1 e 1 @3995 ]
-[s S148 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSP1IE 1 0 :1:3 
-`uc 1 TX1IE 1 0 :1:4 
-`uc 1 RC1IE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-`uc 1 PMPIE 1 0 :1:7 
+[u S169 . 1 `S158 1 . 1 0 `S162 1 . 1 0 ]
+[v _OSCTUNEbits OSCTUNEbits `VES169  1 e 1 @3995 ]
+[s S21 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PMPIF 1 0 :1:7 
 ]
 "12616
-[s S157 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 SSPIE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
+[s S30 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
 ]
-[s S162 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 PSPIE 1 0 :1:7 
+[s S35 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
 ]
-[u S165 . 1 `S148 1 . 1 0 `S157 1 . 1 0 `S162 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES165  1 e 1 @3997 ]
+[u S38 . 1 `S21 1 . 1 0 `S30 1 . 1 0 `S35 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES38  1 e 1 @3997 ]
 "12707
-[v _PIR1bits PIR1bits `VES165  1 e 1 @3998 ]
+[v _PIR1bits PIR1bits `VES38  1 e 1 @3998 ]
 "12798
-[v _IPR1bits IPR1bits `VES165  1 e 1 @3999 ]
+[v _IPR1bits IPR1bits `VES38  1 e 1 @3999 ]
 "17955
 [v _T2CON T2CON `VEuc  1 e 1 @4042 ]
-[s S274 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S305 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "17976
-[s S278 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S309 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -240,31 +240,31 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S286 . 1 `S274 1 . 1 0 `S278 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES286  1 e 1 @4042 ]
+[u S317 . 1 `S305 1 . 1 0 `S309 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES317  1 e 1 @4042 ]
 "18025
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "18062
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S302 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S333 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "18276
-[s S304 . 1 `uc 1 . 1 0 :1:0 
+[s S335 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S307 . 1 `uc 1 . 1 0 :2:0 
+[s S338 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S310 . 1 `uc 1 . 1 0 :3:0 
+[s S341 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S313 . 1 `uc 1 . 1 0 :4:0 
+[s S344 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S316 . 1 `uc 1 . 1 0 :5:0 
+[s S347 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_CM 1 0 :1:5 
 ]
-[s S319 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S350 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -273,16 +273,16 @@
 `uc 1 . 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S328 . 1 `uc 1 BOR 1 0 :1:0 
+[s S359 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 `uc 1 CM 1 0 :1:5 
 ]
-[u S335 . 1 `S302 1 . 1 0 `S304 1 . 1 0 `S307 1 . 1 0 `S310 1 . 1 0 `S313 1 . 1 0 `S316 1 . 1 0 `S319 1 . 1 0 `S328 1 . 1 0 ]
-[v _RCONbits RCONbits `VES335  1 e 1 @4048 ]
-[s S378 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S366 . 1 `S333 1 . 1 0 `S335 1 . 1 0 `S338 1 . 1 0 `S341 1 . 1 0 `S344 1 . 1 0 `S347 1 . 1 0 `S350 1 . 1 0 `S359 1 . 1 0 ]
+[v _RCONbits RCONbits `VES366  1 e 1 @4048 ]
+[s S409 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -292,7 +292,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "19915
-[s S387 . 1 `uc 1 . 1 0 :1:0 
+[s S418 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -301,20 +301,20 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S396 . 1 `uc 1 . 1 0 :6:0 
+[s S427 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S413 . 1 `S378 1 . 1 0 `S387 1 . 1 0 `S396 1 . 1 0 `S387 1 . 1 0 `S396 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES413  1 e 1 @4082 ]
-"40 /home/marco/github/demo-project/PierinPIC18.X/main.c
+[u S444 . 1 `S409 1 . 1 0 `S418 1 . 1 0 `S427 1 . 1 0 `S418 1 . 1 0 `S427 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES444  1 e 1 @4082 ]
+"21 /home/marco/github/demo-project/PierinPIC18.X/main.h
+[v _timer_delay timer_delay `VEus  1 e 2 0 ]
+"35 /home/marco/github/demo-project/PierinPIC18.X/main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"42
-[v main@timer_delay timer_delay `VEus  1 a 2 34 ]
-"41
+"36
 [v main@c c `uc  1 a 1 33 ]
-"89
+"83
 } 0
 "38 /home/marco/github/demo-project/PierinPIC18.X/user.c
 [v _InitApp InitApp `(v  1 e 0 0 ]
@@ -331,13 +331,13 @@
 {
 "36
 } 0
-"75 /home/marco/github/demo-project/PierinPIC18.X/interrupts.c
+"77 /home/marco/github/demo-project/PierinPIC18.X/interrupts.c
 [v _low_isr low_isr `IIL(v  1 e 0 0 ]
 {
-"102
+"83
 } 0
-"36
+"38
 [v _high_isr high_isr `II(v  1 e 0 0 ]
 {
-"63
+"65
 } 0
