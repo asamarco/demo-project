@@ -74,9 +74,6 @@ void low_isr(void)
 #else
 #error "Invalid compiler selection for implemented ISR routines"
 #endif
-
-extern volatile unsigned short timer_delay = 0;
-
 {
     if(PIR1bits.TMR2IF)
     {

@@ -21,12 +21,13 @@
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
 
+
 #define PERIOD 200 //ms
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
 /******************************************************************************/
-volatile unsigned short timer_delay = 0;    // Timer software
+
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
