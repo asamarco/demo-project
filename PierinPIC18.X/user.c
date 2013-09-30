@@ -24,6 +24,15 @@
 /******************************************************************************/
 
 /* <Initialize variables in user.h and insert code for user algorithms.> */
+void timer2_deInit(void)
+{
+    T2CON = 0;            // Reset timer 2 control register
+    TMR2 = 0;             // Set internal counter
+    PR2 = 0;              // Set comparator register
+    PIE1bits.TMR2IE = 0;  // Disable interrupt
+    IPR1bits.TMR2IP = 0;  // Reset interrupt priority bit
+    PIR1bits.TMR2IF = 0;  // set interrupt flag
+}
 
 void InitApp(void)
 {
@@ -51,7 +60,7 @@ void InitApp(void)
     /* Initialize peripherals */
 
     /* timer2 */
-
+    timer2_deInit();
     T2CONbits.T2CKPS = 2; //2 interrupts per millisecond
     T2CONbits.T2OUTPS = 4;
     PR2 = 150;

@@ -1,5 +1,53 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"10933 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
+"17955 /opt/microchip/xc8/v1.20/include/pic18f47j53.h
+[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
+"18062
+[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
+"18025
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"12595
+[s S801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S801 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE PMPIE ]
+"12605
+[s S802 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S802 . . SSPIE TXIE RCIE ]
+"12611
+[s S803 :7 `uc 1 :1 `uc 1 ]
+[n S803 . . PSPIE ]
+"12594
+[u S800 `S801 1 `S802 1 `S803 1 ]
+[n S800 . . . . ]
+"12616
+[v _PIE1bits `VS800 ~T0 @X0 0 e@3997 ]
+"12777
+[s S809 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S809 . TMR1IP TMR2IP CCP1IP SSP1IP TX1IP RC1IP ADIP PMPIP ]
+"12787
+[s S810 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S810 . . SSPIP TXIP RCIP ]
+"12793
+[s S811 :7 `uc 1 :1 `uc 1 ]
+[n S811 . . PSPIP ]
+"12776
+[u S808 `S809 1 `S810 1 `S811 1 ]
+[n S808 . . . . ]
+"12798
+[v _IPR1bits `VS808 ~T0 @X0 0 e@3999 ]
+"12686
+[s S805 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S805 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF PMPIF ]
+"12696
+[s S806 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S806 . . SSPIF TXIF RCIF ]
+"12702
+[s S807 :7 `uc 1 :1 `uc 1 ]
+[n S807 . . PSPIF ]
+"12685
+[u S804 `S805 1 `S806 1 `S807 1 ]
+[n S804 . . . . ]
+"12707
+[v _PIR1bits `VS804 ~T0 @X0 0 e@3998 ]
+"10933
 [v _LATA `Vuc ~T0 @X0 0 e@3977 ]
 "11781
 [v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
@@ -28,36 +76,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1142 . . . ]
 "17976
 [v _T2CONbits `VS1142 ~T0 @X0 0 e@4042 ]
-"18025
-[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
-"12777
-[s S809 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S809 . TMR1IP TMR2IP CCP1IP SSP1IP TX1IP RC1IP ADIP PMPIP ]
-"12787
-[s S810 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S810 . . SSPIP TXIP RCIP ]
-"12793
-[s S811 :7 `uc 1 :1 `uc 1 ]
-[n S811 . . PSPIP ]
-"12776
-[u S808 `S809 1 `S810 1 `S811 1 ]
-[n S808 . . . . ]
-"12798
-[v _IPR1bits `VS808 ~T0 @X0 0 e@3999 ]
-"12595
-[s S801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S801 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE PMPIE ]
-"12605
-[s S802 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S802 . . SSPIE TXIE RCIE ]
-"12611
-[s S803 :7 `uc 1 :1 `uc 1 ]
-[n S803 . . PSPIE ]
-"12594
-[u S800 `S801 1 `S802 1 `S803 1 ]
-[n S800 . . . . ]
-"12616
-[v _PIE1bits `VS800 ~T0 @X0 0 e@3997 ]
 "18234
 [s S1162 :1 `uc 1 ]
 [n S1162 . NOT_BOR ]
@@ -9884,71 +9902,103 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;user.h: 13: void InitApp(void);
-"29 user.c
+"28 user.c
+[v _timer2_deInit `(v ~T0 @X0 1 ef ]
+{
+[; ;user.c: 27: void timer2_deInit(void)
+[; ;user.c: 28: {
+[e :U _timer2_deInit ]
+[f ]
+[; ;user.c: 29: T2CON = 0;
+"29
+[e = _T2CON -> -> 0 `i `uc ]
+[; ;user.c: 30: TMR2 = 0;
+"30
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;user.c: 31: PR2 = 0;
+"31
+[e = _PR2 -> -> 0 `i `uc ]
+[; ;user.c: 32: PIE1bits.TMR2IE = 0;
+"32
+[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 33: IPR1bits.TMR2IP = 0;
+"33
+[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 34: PIR1bits.TMR2IF = 0;
+"34
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 35: }
+"35
+[e :UE 1356 ]
+}
+"38
 [v _InitApp `(v ~T0 @X0 1 ef ]
 {
-[; ;user.c: 28: void InitApp(void)
-[; ;user.c: 29: {
+[; ;user.c: 37: void InitApp(void)
+[; ;user.c: 38: {
 [e :U _InitApp ]
 [f ]
-[; ;user.c: 33: LATA = 0;
-"33
-[e = _LATA -> -> 0 `i `uc ]
-[; ;user.c: 34: TRISA = 0b11111111;
-"34
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;user.c: 36: LATB = 0;
-"36
-[e = _LATB -> -> 0 `i `uc ]
-[; ;user.c: 37: TRISA = 0b11111111;
-"37
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;user.c: 39: LATC = 0;
-"39
-[e = _LATC -> -> 0 `i `uc ]
-[; ;user.c: 40: TRISC = 0b11111111;
-"40
-[e = _TRISC -> -> 255 `i `uc ]
-[; ;user.c: 42: LATD = 0;
+[; ;user.c: 42: LATA = 0;
 "42
-[e = _LATD -> -> 0 `i `uc ]
-[; ;user.c: 43: TRISD = 0b00111111;
+[e = _LATA -> -> 0 `i `uc ]
+[; ;user.c: 43: TRISA = 0b11111111;
 "43
-[e = _TRISD -> -> 63 `i `uc ]
-[; ;user.c: 45: LATE = 0;
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;user.c: 45: LATB = 0;
 "45
-[e = _LATE -> -> 0 `i `uc ]
-[; ;user.c: 46: TRISE = 0b11111111;
+[e = _LATB -> -> 0 `i `uc ]
+[; ;user.c: 46: TRISA = 0b11111111;
 "46
-[e = _TRISE -> -> 255 `i `uc ]
-[; ;user.c: 55: T2CONbits.T2CKPS = 2;
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;user.c: 48: LATC = 0;
+"48
+[e = _LATC -> -> 0 `i `uc ]
+[; ;user.c: 49: TRISC = 0b11111111;
+"49
+[e = _TRISC -> -> 255 `i `uc ]
+[; ;user.c: 51: LATD = 0;
+"51
+[e = _LATD -> -> 0 `i `uc ]
+[; ;user.c: 52: TRISD = 0b00111111;
+"52
+[e = _TRISD -> -> 63 `i `uc ]
+[; ;user.c: 54: LATE = 0;
+"54
+[e = _LATE -> -> 0 `i `uc ]
+[; ;user.c: 55: TRISE = 0b11111111;
 "55
-[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
-[; ;user.c: 56: T2CONbits.T2OUTPS = 4;
-"56
-[e = . . _T2CONbits 0 2 -> -> 4 `i `uc ]
-[; ;user.c: 57: PR2 = 150;
-"57
-[e = _PR2 -> -> 150 `i `uc ]
-[; ;user.c: 58: IPR1bits.TMR2IP = 0;
-"58
-[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
-[; ;user.c: 59: PIE1bits.TMR2IE = 1;
-"59
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;user.c: 63: RCONbits.IPEN = 1;
+[e = _TRISE -> -> 255 `i `uc ]
+[; ;user.c: 63: timer2_deInit();
 "63
-[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
-[; ;user.c: 67: INTCONbits.GIEL = 1;
+[e ( _timer2_deInit ..  ]
+[; ;user.c: 64: T2CONbits.T2CKPS = 2;
+"64
+[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
+[; ;user.c: 65: T2CONbits.T2OUTPS = 4;
+"65
+[e = . . _T2CONbits 0 2 -> -> 4 `i `uc ]
+[; ;user.c: 66: PR2 = 150;
+"66
+[e = _PR2 -> -> 150 `i `uc ]
+[; ;user.c: 67: IPR1bits.TMR2IP = 0;
 "67
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;user.c: 68: INTCONbits.GIEH = 1;
+[e = . . _IPR1bits 0 1 -> -> 0 `i `uc ]
+[; ;user.c: 68: PIE1bits.TMR2IE = 1;
 "68
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;user.c: 72: T2CONbits.TMR2ON = 1;
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;user.c: 72: RCONbits.IPEN = 1;
 "72
+[e = . . _RCONbits 6 7 -> -> 1 `i `uc ]
+[; ;user.c: 76: INTCONbits.GIEL = 1;
+"76
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;user.c: 77: INTCONbits.GIEH = 1;
+"77
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;user.c: 81: T2CONbits.TMR2ON = 1;
+"81
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-[; ;user.c: 74: }
-"74
-[e :UE 1356 ]
+[; ;user.c: 83: }
+"83
+[e :UE 1357 ]
 }

@@ -53,8 +53,8 @@ void main(void)
     {
         if (!timer_delay)
         {
-            timer_delay=200; //ms
-            if (PL1 && PL2)
+            timer_delay=PERIOD; //ms
+            if (PL1 && PL2) //push buttons are not pressed
             {
                 if (c & 0x02) //changes every 2 PERIOD
                 {
@@ -67,7 +67,7 @@ void main(void)
                     LD2 = 1;
                 }   
             }
-            else
+            else //PL1 and/or PL2 are pressed
             {
                 LD1 = 0;
                 LD2 = 0;

@@ -9799,132 +9799,160 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;system.h: 21: void ConfigureOscillator(void);
 [; ;user.h: 13: void InitApp(void);
-"39 main.c
+"40 main.c
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 38: void main(void)
-[; ;main.c: 39: {
+[; ;main.c: 39: void main(void)
+[; ;main.c: 40: {
 [e :U _main ]
 [f ]
-"40
-[v _c `uc ~T0 @X0 1 a ]
-[; ;main.c: 40: char c = 0;
-[e = _c -> -> 0 `i `uc ]
 "41
+[v _c `uc ~T0 @X0 1 a ]
+[; ;main.c: 41: char c = 0;
+[e = _c -> -> 0 `i `uc ]
+"42
 [v _timer_delay `Vus ~T0 @X0 1 a ]
-[; ;main.c: 41: volatile unsigned short timer_delay = 0;
+[; ;main.c: 42: volatile unsigned short timer_delay = 0;
 [e = _timer_delay -> -> 0 `i `us ]
-[; ;main.c: 44: ConfigureOscillator();
-"44
+[; ;main.c: 45: ConfigureOscillator();
+"45
 [e ( _ConfigureOscillator ..  ]
-[; ;main.c: 47: InitApp();
-"47
+[; ;main.c: 48: InitApp();
+"48
 [e ( _InitApp ..  ]
-[; ;main.c: 51: while(1)
-"51
-[e :U 1358 ]
-[; ;main.c: 52: {
+[; ;main.c: 52: while(1)
 "52
-{
-[; ;main.c: 53: if (!timer_delay)
+[e :U 1358 ]
+[; ;main.c: 53: {
 "53
-[e $ ! ! != -> _timer_delay `ui -> -> -> 0 `i `Vus `ui 1360  ]
-[; ;main.c: 54: {
+{
+[; ;main.c: 54: if (!timer_delay)
 "54
-{
-[; ;main.c: 55: timer_delay=200;
+[e $ ! ! != -> _timer_delay `ui -> -> -> 0 `i `Vus `ui 1360  ]
+[; ;main.c: 55: {
 "55
-[e = _timer_delay -> -> 200 `i `us ]
-[; ;main.c: 56: if (PORTDbits.RD4 && PORTDbits.RD5)
+{
+[; ;main.c: 56: timer_delay=200;
 "56
-[e $ ! && != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i 1361  ]
-[; ;main.c: 57: {
+[e = _timer_delay -> -> 200 `i `us ]
+[; ;main.c: 57: if (PORTDbits.RD4 && PORTDbits.RD5)
 "57
-{
-[; ;main.c: 58: if (c & 0x02)
+[e $ ! && != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i 1361  ]
+[; ;main.c: 58: {
 "58
-[e $ ! != & -> _c `i -> 2 `i -> 0 `i 1362  ]
-[; ;main.c: 59: {
+{
+[; ;main.c: 59: if (c & 0x02)
 "59
-{
-[; ;main.c: 60: PORTDbits.RD6 = 1;
+[e $ ! != & -> _c `i -> 2 `i -> 0 `i 1362  ]
+[; ;main.c: 60: {
 "60
-[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 61: PORTDbits.RD7 = 0;
-"61
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-"62
-}
-[; ;main.c: 62: }
-[e $U 1363  ]
-"63
-[e :U 1362 ]
-[; ;main.c: 63: else
-[; ;main.c: 64: {
-"64
 {
-[; ;main.c: 65: PORTDbits.RD6 = 0;
-"65
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 66: PORTDbits.RD7 = 1;
-"66
-[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"67
+[; ;main.c: 61: PORTDbits.RD6 = 1;
+"61
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+[; ;main.c: 62: PORTDbits.RD7 = 0;
+"62
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+"63
 }
-[e :U 1363 ]
+[; ;main.c: 63: }
+[e $U 1363  ]
+"64
+[e :U 1362 ]
+[; ;main.c: 64: else
+[; ;main.c: 65: {
+"65
+{
+[; ;main.c: 66: PORTDbits.RD6 = 0;
+"66
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 67: PORTDbits.RD7 = 1;
+"67
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
 "68
 }
-[; ;main.c: 67: }
-[; ;main.c: 68: }
-[e $U 1364  ]
+[e :U 1363 ]
 "69
-[e :U 1361 ]
-[; ;main.c: 69: else
-[; ;main.c: 70: {
+}
+[; ;main.c: 68: }
+[; ;main.c: 69: }
+[e $U 1364  ]
 "70
-{
-[; ;main.c: 71: PORTDbits.RD6 = 0;
+[e :U 1361 ]
+[; ;main.c: 70: else
+[; ;main.c: 71: {
 "71
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 72: PORTDbits.RD7 = 0;
-"72
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-[; ;main.c: 73: if (!PORTDbits.RD4)
-"73
-[e $ ! ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i 1365  ]
-[; ;main.c: 74: {
-"74
 {
-[; ;main.c: 75: if (c & 0x01) PORTDbits.RD6 = 1;
+[; ;main.c: 72: PORTDbits.RD6 = 0;
+"72
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 73: PORTDbits.RD7 = 0;
+"73
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[; ;main.c: 74: if (!PORTDbits.RD4)
+"74
+[e $ ! ! != -> . . _PORTDbits 0 4 `i -> -> -> 0 `i `Vuc `i 1365  ]
+[; ;main.c: 75: {
 "75
+{
+[; ;main.c: 76: if (c & 0x01) PORTDbits.RD6 = 1;
+"76
 [e $ ! != & -> _c `i -> 1 `i -> 0 `i 1366  ]
 [e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
 [e $U 1367  ]
-"76
+"77
 [e :U 1366 ]
-[; ;main.c: 76: else PORTDbits.RD6 = 0;
+[; ;main.c: 77: else PORTDbits.RD6 = 0;
 [e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
 [e :U 1367 ]
-"77
-}
-[e :U 1365 ]
 "78
 }
-[e :U 1364 ]
+[e :U 1365 ]
+[; ;main.c: 78: }
+[; ;main.c: 79: if (!PORTDbits.RD5)
 "79
+[e $ ! ! != -> . . _PORTDbits 0 5 `i -> -> -> 0 `i `Vuc `i 1368  ]
+[; ;main.c: 80: {
+"80
+{
+[; ;main.c: 81: if (c & 0x01) PORTDbits.RD7 = 1;
+"81
+[e $ ! != & -> _c `i -> 1 `i -> 0 `i 1369  ]
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
+[e $U 1370  ]
+"82
+[e :U 1369 ]
+[; ;main.c: 82: else PORTDbits.RD7 = 0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+[e :U 1370 ]
+"83
+}
+[e :U 1368 ]
+"84
+}
+[e :U 1364 ]
+[; ;main.c: 83: }
+[; ;main.c: 84: }
+[; ;main.c: 85: c++;
+"85
+[e ++ _c -> -> 1 `i `uc ]
+[; ;main.c: 86: if (4 == c) c=0;
+"86
+[e $ ! == -> 4 `i -> _c `i 1371  ]
+[e = _c -> -> 0 `i `uc ]
+[e :U 1371 ]
+"87
 }
 [e :U 1360 ]
-"80
+"88
 }
 [e :U 1357 ]
-"51
+"52
 [e $U 1358  ]
 [e :U 1359 ]
-[; ;main.c: 77: }
-[; ;main.c: 78: }
-[; ;main.c: 79: }
-[; ;main.c: 80: }
-[; ;main.c: 81: }
-"81
+[; ;main.c: 87: }
+[; ;main.c: 88: }
+[; ;main.c: 89: }
+"89
 [e :UE 1356 ]
 }

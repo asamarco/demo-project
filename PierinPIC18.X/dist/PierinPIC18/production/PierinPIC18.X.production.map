@@ -5,7 +5,7 @@ Linker command line:
 --edf=/opt/microchip/xc8/v1.20/dat/en_msgs.txt -cs \
   -h+dist/PierinPIC18/production/PierinPIC18.X.production.sym \
   --cmf=dist/PierinPIC18/production/PierinPIC18.X.production.cmf -z \
-  -Q18F47J53 -o/tmp/cgtOey2aY \
+  -Q18F47J53 -o/tmp/cgtnXR3hk \
   -Mdist/PierinPIC18/production/PierinPIC18.X.production.map -E1 -ver=XC8 \
   -ACODE=01000h-01FFF7h -ACONST=01000h-01FFF7h \
   -ASMALLCONST=01000h-010FFhx495,01FF00h-01FFF7h \
@@ -25,7 +25,7 @@ Linker command line:
   -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
-  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgtuYJLS2.obj \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE /tmp/cgtiEQkkZ.obj \
   dist/PierinPIC18/production/PierinPIC18.X.production.obj 
 
 Object code version is 3.11
@@ -38,19 +38,20 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgtuYJLS2.obj
+/tmp/cgtiEQkkZ.obj
                 end_init                           10A2     10A2        4      80C       0
                 reset_vec                          1000     1000        4      800       0
                 config                            1FFF8    1FFF8        8    1FFF8       0
 dist/PierinPIC18/production/PierinPIC18.X.production.obj
                 intcodelo                          1018     1018       8A      80C       0
                 intcode                            1008     1008       10      804       0
-                intcode_body                       10A6     10A6       66      80C       0
-                text2                              11A0     11A0       12      80C       0
-                text1                              115E     115E       42      80C       0
-                text0                              110C     110C       52      80C       0
+                intcode_body                       1114     1114       66      80C       0
+                text3                              11D4     11D4       12      80C       0
+                text2                              11C0     11C0       14      80C       0
+                text1                              117A     117A       46      80C       0
+                text0                              10A6     10A6       6E      80C       0
                 cstackCOMRAM                          1        1       24        1       1
-                cinit                              11B2     11B2        6      80C       0
+                cinit                              11E6     11E6        6      80C       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
@@ -58,11 +59,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcodelo                          1018     1018       8A         0
                 intcode                            1008     1008       10         0
                 reset_vec                          1000     1000        4         0
-                intcode_body                       10A6     10A6       66         0
-                text2                              11A0     11A0       12         0
-                text1                              115E     115E       42         0
-                text0                              110C     110C       52         0
-                cinit                              11B2     11B2        6         0
+                intcode_body                       1114     1114       66         0
+                text3                              11D4     11D4       12         0
+                text2                              11C0     11C0       14         0
+                text1                              117A     117A       46         0
+                text0                              10A6     10A6       6E         0
+                cinit                              11E6     11E6        6         0
 
         CLASS   CONST          
 
@@ -125,7 +127,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  000024  000025         1       1  COMRAM  
                 reset_vec                      001000  000004  001004       800       0  CODE    
                 intcode                        001008  000010  001018       804       0  CODE    
-                intcodelo                      001018  0001A0  0011B8       80C       0  CODE    
+                intcodelo                      001018  0001D4  0011EC       80C       0  CODE    
                 config                         01FFF8  000008  020000     1FFF8       0  CONFIG  
 
 
@@ -149,25 +151,25 @@ UNUSED ADDRESS RANGES
         BANK9            00900-009FF             100
         BIGRAM           00025-00EAF             E8B
         CODE             01004-01007               4
-                         011B8-1FFF7           1EE40
+                         011EC-1FFF7           1EE0C
         COMRAM           00025-0005F              3B
         CONST            01004-01007               4
-                         011B8-1FFF7           1EE40
+                         011EC-1FFF7           1EE0C
         FARRAM           00000-00000               1
         MEDIUMCONST      01004-01007               4
-                         011B8-0FFFF            EE48
+                         011EC-0FFFF            EE14
                          10F00-1FFF7            F0F8
         RAM              00060-00EAF             100
         SFR              00EB0-00FFF              60
         SMALLCONST       01004-01007               4
-                         011B8-1FFF7             100
+                         011EC-1FFF7             100
 
                                   Symbol Table
 
-_ConfigureOscillator          text2         011A0
+_ConfigureOscillator          text3         011D4
 _INTCONbits                   (abs)         00FF2
 _IPR1bits                     (abs)         00F9F
-_InitApp                      text1         0115E
+_InitApp                      text1         0117A
 _LATA                         (abs)         00F89
 _LATB                         (abs)         00F8A
 _LATC                         (abs)         00F8B
@@ -175,10 +177,13 @@ _LATD                         (abs)         00F8C
 _LATE                         (abs)         00F8D
 _OSCTUNEbits                  (abs)         00F9B
 _PIE1bits                     (abs)         00F9D
+_PIR1bits                     (abs)         00F9E
 _PORTDbits                    (abs)         00F83
 _PR2                          (abs)         00FCB
 _RCONbits                     (abs)         00FD0
+_T2CON                        (abs)         00FCA
 _T2CONbits                    (abs)         00FCA
+_TMR2                         (abs)         00FCC
 _TRISA                        (abs)         00F92
 _TRISC                        (abs)         00F94
 _TRISD                        (abs)         00F95
@@ -274,6 +279,7 @@ __Htext                       text          00000
 __Htext0                      text0         00000
 __Htext1                      text1         00000
 __Htext2                      text2         00000
+__Htext3                      text3         00000
 __LRAM                        (abs)         00001
 __Labs1                       abs1          00000
 __Lbank0                      bank0         00000
@@ -339,38 +345,43 @@ __Ltext                       text          00000
 __Ltext0                      text0         00000
 __Ltext1                      text1         00000
 __Ltext2                      text2         00000
+__Ltext3                      text3         00000
 __S0                          (abs)         20000
 __S1                          (abs)         00025
 __accesstop                   (abs)         00060
 __activetblptr                (abs)         00000
-__end_of_ConfigureOscillator  text2         011B2
-__end_of_InitApp              text1         011A0
-__end_of__initialization      cinit         011B2
-__end_of_high_isr             intcode_body  0110C
+__end_of_ConfigureOscillator  text3         011E6
+__end_of_InitApp              text1         011C0
+__end_of__initialization      cinit         011E6
+__end_of_high_isr             intcode_body  0117A
 __end_of_low_isr              intcodelo     010A2
-__end_of_main                 text0         0115E
-__initialization              cinit         011B2
+__end_of_main                 text0         01114
+__end_of_timer2_deInit        text2         011D4
+__initialization              cinit         011E6
 __mediumconst                 mediumconst   00000
-__pcinit                      cinit         011B2
+__pcinit                      cinit         011E6
 __pcstackCOMRAM               cstackCOMRAM  00001
 __pintcode                    intcode       01008
-__pintcode_body               intcode_body  010A6
+__pintcode_body               intcode_body  01114
 __pintcodelo                  intcodelo     01018
-__ptext0                      text0         0110C
-__ptext1                      text1         0115E
-__ptext2                      text2         011A0
+__ptext0                      text0         010A6
+__ptext1                      text1         0117A
+__ptext2                      text2         011C0
+__ptext3                      text3         011D4
 __ramtop                      ramtop        00F00
 __size_of_ConfigureOscillator (abs)         00000
 __size_of_InitApp             (abs)         00000
 __size_of_high_isr            (abs)         00000
 __size_of_low_isr             (abs)         00000
 __size_of_main                (abs)         00000
+__size_of_timer2_deInit       (abs)         00000
 __smallconst                  smallconst    00000
 _high_isr                     intcode       01008
 _low_isr                      intcodelo     01018
-_main                         text0         0110C
-end_of_initialization         cinit         011B2
-int_func                      intcode_body  010A6
+_main                         text0         010A6
+_timer2_deInit                text2         011C0
+end_of_initialization         cinit         011E6
+int_func                      intcode_body  01114
 intlevel0                     text          00000
 intlevel1                     text          00000
 intlevel2                     text          00000
@@ -378,14 +389,14 @@ intlevel3                     text          00000
 main@c                        cstackCOMRAM  00022
 main@timer_delay              cstackCOMRAM  00023
 start                         init          010A2
-start_initialization          cinit         011B2
+start_initialization          cinit         011E6
 
 
 FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 39 in file "main.c"
+		line 40 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -405,7 +416,7 @@ FUNCTION INFORMATION:
       Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        4 bytes
- Hardware stack levels required when called:    3
+ Hardware stack levels required when called:    4
  This function calls:
 		_ConfigureOscillator
 		_InitApp
@@ -416,7 +427,37 @@ Total ram usage:        4 bytes
 
  *************** function _InitApp *****************
  Defined at:
-		line 29 in file "user.c"
+		line 38 in file "user.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+		None               void
+ Registers used:
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, pclat, btemp, btemp+1, btemp+2, btemp+3, btemp+4, btemp+5, btemp+6, btemp+7, tosl, structret, tblptrl, tblptrh, tblptru, prodl, prodh, bsr, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_timer2_deInit
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _timer2_deInit *****************
+ Defined at:
+		line 28 in file "user.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -440,7 +481,7 @@ Total ram usage:        0 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_main
+		_InitApp
  This function uses a non-reentrant model
 
 
@@ -538,28 +579,29 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initializatio		CODE           	11B2	0000	0
+		__initializatio		CODE           	11E6	0000	0
 
 shared estimated size: 0
 
 main.c
-		_main          		CODE           	110C	0000	82
+		_main          		CODE           	10A6	0000	110
 
-main.c estimated size: 82
+main.c estimated size: 110
 
 system.c
-		_ConfigureOscil		CODE           	11A0	0000	18
+		_ConfigureOscil		CODE           	11D4	0000	18
 
 system.c estimated size: 18
 
 interrupts.c
-		_high_isr      		CODE           	1008	0000	260
+		_high_isr      		CODE           	1008	0000	370
 		_low_isr       		CODE           	1018	0000	138
 
-interrupts.c estimated size: 398
+interrupts.c estimated size: 508
 
 user.c
-		_InitApp       		CODE           	115E	0000	66
+		_timer2_deInit 		CODE           	11C0	0000	20
+		_InitApp       		CODE           	117A	0000	70
 
-user.c estimated size: 66
+user.c estimated size: 90
 

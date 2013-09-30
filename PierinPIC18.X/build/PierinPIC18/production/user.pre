@@ -12730,7 +12730,17 @@ typedef unsigned char bool;
 # 13 "user.h"
 void InitApp(void);
 
-# 28 "user.c"
+# 27 "user.c"
+void timer2_deInit(void)
+{
+T2CON = 0;
+TMR2 = 0;
+PR2 = 0;
+PIE1bits.TMR2IE = 0;
+IPR1bits.TMR2IP = 0;
+PIR1bits.TMR2IF = 0;
+}
+
 void InitApp(void)
 {
 
@@ -12751,7 +12761,8 @@ TRISD = 0b00111111;
 LATE = 0;
 TRISE = 0b11111111;
 
-# 55
+# 63
+timer2_deInit();
 T2CONbits.T2CKPS = 2;
 T2CONbits.T2OUTPS = 4;
 PR2 = 150;
