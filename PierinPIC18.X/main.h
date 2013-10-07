@@ -16,9 +16,7 @@
 #define LD2 PORTDbits.RD7
 
 
-/*Global variables*/
 
-volatile unsigned short timer_delay = 0;    // Timer software
 
 #endif	/* MAIN_H */
 

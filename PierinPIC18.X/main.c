@@ -28,6 +28,8 @@
 /* User Global Variable Declaration                                           */
 /******************************************************************************/
 
+volatile unsigned short timer_delay = 0;    // Timer software
+
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
@@ -35,7 +37,7 @@
 void main(void)
 {
     char c = 0; //flash duration
-
+  
     /* Configure the oscillator for the device */
     ConfigureOscillator();
 

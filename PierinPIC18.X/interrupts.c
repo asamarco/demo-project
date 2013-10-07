@@ -17,7 +17,6 @@
 
 #endif
 
-#include "main.h"
 
 /******************************************************************************/
 /* Interrupt Routines                                                         */
@@ -75,6 +74,8 @@ void low_isr(void)
 #error "Invalid compiler selection for implemented ISR routines"
 #endif
 {
+    extern volatile unsigned short timer_delay;
+
     if(PIR1bits.TMR2IF)
     {
         if (timer_delay) timer_delay--;
